@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 5997181538685844216}
   - component: {fileID: 5997181538685844219}
   - component: {fileID: 5997181538685844218}
+  - component: {fileID: -4490070713617168118}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -212,3 +213,16 @@ MonoBehaviour:
   projectileSpawnPoint: {fileID: 5997181538527235786}
   projectileSpeed: 10
   fireRate: 0.3
+--- !u!114 &-4490070713617168118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5997181538685844213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561e35e2e16ce18468930f3acefc6a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
