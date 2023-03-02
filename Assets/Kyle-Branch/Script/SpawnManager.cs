@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+
     [SerializeField] private float spawnRate = 1f;
     [SerializeField] private GameObject[] enemyPrefabs;
 
@@ -33,6 +34,7 @@ public class SpawnManager : MonoBehaviour
 
             Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
         }
+
     }
 
 }
