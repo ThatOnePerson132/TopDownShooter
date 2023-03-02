@@ -6,14 +6,14 @@ public class SpawnManager : MonoBehaviour
 {
 
     [SerializeField] private float spawnRate = 1f;
-
     [SerializeField] private GameObject[] enemyPrefabs;
+
     [SerializeField] private bool canSpawn = true;
 
     // Start is called before the first frame update
-    private void Start()
+    void Start()
     {
-        StartCoroutine(Spawner());
+        StartCoroutine(Spawner()); 
     }
 
     // Update is called once per frame
@@ -35,9 +35,6 @@ public class SpawnManager : MonoBehaviour
             Instantiate(enemyToSpawn, transform.position, Quaternion.identity);
         }
 
-        
-
-
-
     }
+
 }
