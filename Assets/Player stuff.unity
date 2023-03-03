@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 414798113}
   - component: {fileID: 414798112}
   - component: {fileID: 414798111}
+  - component: {fileID: 414798114}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -176,7 +177,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 12.0507145
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -207,6 +208,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &414798114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414798110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e615d910237956041848f2afc18066ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1147948027}
+  smoothing: 45
 --- !u!1 &746556424
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +352,6 @@ GameObject:
   - component: {fileID: 1147948022}
   - component: {fileID: 1147948021}
   - component: {fileID: 1147948029}
-  - component: {fileID: 1147948028}
   - component: {fileID: 1147948030}
   m_Layer: 0
   m_Name: UpdatedPlayer
@@ -403,6 +417,15 @@ MonoBehaviour:
   moveSpeed: 5
   acceleration: 20
   deceleration: 20
+  skins:
+  - {fileID: 21300000, guid: 236188120b446344fa69102503529ad5, type: 3}
+  - {fileID: 21300000, guid: 7d9d27e4bbbbb3b46a7c6086b443cb94, type: 3}
+  sr: {fileID: 1107037600}
+  index: 0
+  ps: {fileID: 0}
+  FireRate:
+  - 0.5
+  - 0.1
 --- !u!212 &1147948026
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -472,32 +495,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!61 &1147948028
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1147948020}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.4103356, y: 0.0011920929}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.4}
-    newSize: {x: 6.4, y: 6.4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.538062, y: 3.804346}
-  m_EdgeRadius: 0
 --- !u!50 &1147948029
 Rigidbody2D:
   serializedVersion: 4
@@ -519,17 +516,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1147948030
-MonoBehaviour:
+--- !u!58 &1147948030
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147948020}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e615d910237956041848f2afc18066ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 414798113}
-  smoothing: 5
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.4214527, y: 0.021613069}
+  serializedVersion: 2
+  m_Radius: 1.8491898
